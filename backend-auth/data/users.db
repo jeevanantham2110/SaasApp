@@ -1,0 +1,7 @@
+{"email":"finaladmin@halleyx.com","password":"$2b$10$e6XxQ1ygMJpHAgwr6as05.zPajZybMFoECBSqwdVgl045ScEUs9Ua","name":"Final Admin","createdAt":{"$$date":1773811815403},"_id":"EKfNktRTQVTPIpuO"}
+{"email":"newadmin@halleyx.com","password":"$2b$10$ARk1NAwXrXKa5W/oeA.qS.71pdyQfibzm7kg3O/w72KdBsxth4A9.","name":"New Admin","createdAt":{"$$date":1773811772902},"_id":"OZtsxTTexIwr4GUp"}
+{"email":"test@halleyx.com","password":"$2b$10$M5vu1WVxjBOxgHcQHCdmAenkVW3c5H.Y56YRP575A5I.4JZdZNNQi","name":"Test User","createdAt":{"$$date":1773811694889},"_id":"txa9gTGRzQm4saNI"}
+{"email":"admin@halleyx.com","password":"$2b$10$1SE4F7Q6TDqBvTK.Dp1nJeBKQKFBaRDWyQGlOPuTKZxhjpa9LaZaO","name":"Admin User","createdAt":{"$$date":1773811327216},"_id":"visXyNISKMfbDu71"}
+{"email":"testuser@halleyx.com","password":"$2b$10$DjBQ/dlliVYuzwZYJ63A9O6Wu2n.6awQTLoGmubuadiQQclaGIhEu","name":"Test User","createdAt":{"$$date":1773812196221},"_id":"KZ9eaE6r1vVEUKJe"}
+{"email":"newuser@halleyx.com","password":"$2b$10$qoJ/3hmv5Ek2b3O3VtiLQOgMLMw6c4WrxCs5CkKlcxWDw29Ez8xHu","name":"New User","createdAt":{"$$date":1773812353703},"_id":"5IAr5jgURyfKhwdY"}
+{"email":"finaluser@halleyx.com","password":"$2b$10$UuymOdwFbZpwyD..yqZRsOL93MWucosQb73ok9zQ5i9CGLr00MXHy","name":"Final User","createdAt":{"$$date":1773813234947},"_id":"NJ9Tq0rFdgMpLGtu"}

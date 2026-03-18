@@ -1,0 +1,19 @@
+WF created: 3767da87-8162-4685-be88-8552a1bcc6f6
+StepCreate parsed OK: metadata_col={}
+Step saved: 0485e582-bad8-4c4c-9a52-daf86e9c5edb
+  step.step_type=task
+  step.metadata_col={}
+  step.updated_at=2026-03-17 17:20:49
+StepResponse FAIL: 1 validation error for StepResponse
+metadata
+  Input should be a valid dictionary [type=dict_type, input_value=MetaData(), input_type=MetaData]
+    For further information visit https://errors.pydantic.dev/2.12/v/dict_type
+Traceback (most recent call last):
+  File "D:\Halleyx Full Stack Engineer - Challenge I\backend\test_step_api.py", line 62, in run_test
+    resp = StepResponse.model_validate(step)
+  File "D:\Halleyx Full Stack Engineer - Challenge I\backend\venv\lib\site-packages\pydantic\main.py", line 716, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+pydantic_core._pydantic_core.ValidationError: 1 validation error for StepResponse
+metadata
+  Input should be a valid dictionary [type=dict_type, input_value=MetaData(), input_type=MetaData]
+    For further information visit https://errors.pydantic.dev/2.12/v/dict_type

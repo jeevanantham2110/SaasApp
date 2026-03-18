@@ -1,0 +1,39 @@
+﻿2026-03-17 22:50:09,808 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-03-17 22:50:09,808 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("workflows")
+2026-03-17 22:50:09,808 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-03-17 22:50:09,810 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("steps")
+2026-03-17 22:50:09,810 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-03-17 22:50:09,810 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("rules")
+2026-03-17 22:50:09,810 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-03-17 22:50:09,811 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("executions")
+2026-03-17 22:50:09,811 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-03-17 22:50:09,811 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("execution_logs")
+2026-03-17 22:50:09,811 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-03-17 22:50:09,812 INFO sqlalchemy.engine.Engine COMMIT
+2026-03-17 22:50:09,822 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-03-17 22:50:09,823 INFO sqlalchemy.engine.Engine INSERT INTO workflows (id, name, version, is_active, input_schema, start_step_id) VALUES (?, ?, ?, ?, ?, ?) RETURNING created_at, updated_at
+2026-03-17 22:50:09,823 INFO sqlalchemy.engine.Engine [generated in 0.00020s] ('7a2dae8cd16b4f70bad2f1cdf08c23e8', 'APITest', 1, 1, '{}', None)
+2026-03-17 22:50:09,825 INFO sqlalchemy.engine.Engine COMMIT
+2026-03-17 22:50:09,828 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-03-17 22:50:09,830 INFO sqlalchemy.engine.Engine SELECT workflows.id, workflows.name, workflows.version, workflows.is_active, workflows.input_schema, workflows.start_step_id, workflows.created_at, workflows.updated_at 
+FROM workflows 
+WHERE workflows.id = ?
+2026-03-17 22:50:09,830 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('7a2dae8cd16b4f70bad2f1cdf08c23e8',)
+WF: 7a2dae8c-d16b-4f70-bad2-f1cdf08c23e8
+Validating StepCreate from body: {'name': 'Step 1', 'step_type': 'task', 'order': 1, 'metadata': {}}
+  StepCreate ok: name='Step 1' step_type=<StepType.task: 'task'> order=1 metadata_col={}
+2026-03-17 22:50:09,833 INFO sqlalchemy.engine.Engine INSERT INTO steps (id, workflow_id, name, step_type, "order", metadata) VALUES (?, ?, ?, ?, ?, ?) RETURNING created_at, updated_at
+2026-03-17 22:50:09,833 INFO sqlalchemy.engine.Engine [generated in 0.00019s] ('48ef62beb36249fd9705f15730afbc68', '7a2dae8cd16b4f70bad2f1cdf08c23e8', 'Step 1', 'task', 1, '{}')
+2026-03-17 22:50:09,836 INFO sqlalchemy.engine.Engine UPDATE workflows SET start_step_id=?, updated_at=CURRENT_TIMESTAMP WHERE workflows.id = ?
+2026-03-17 22:50:09,836 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('48ef62beb36249fd9705f15730afbc68', '7a2dae8cd16b4f70bad2f1cdf08c23e8')
+2026-03-17 22:50:09,836 INFO sqlalchemy.engine.Engine COMMIT
+2026-03-17 22:50:09,839 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-03-17 22:50:09,839 INFO sqlalchemy.engine.Engine SELECT steps.id, steps.workflow_id, steps.name, steps.step_type, steps."order", steps.metadata, steps.created_at, steps.updated_at 
+FROM steps 
+WHERE steps.id = ?
+2026-03-17 22:50:09,839 INFO sqlalchemy.engine.Engine [generated in 0.00012s] ('48ef62beb36249fd9705f15730afbc68',)
+Step saved: 48ef62be-b362-49fd-9705-f15730afbc68
+StepResponse FAIL: 1 validation error for StepResponse
+metadata
+  Input should be a valid dictionary [type=dict_type, input_value=MetaData(), input_type=MetaData]
+    For further information visit https://errors.pydantic.dev/2.12/v/dict_type
